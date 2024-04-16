@@ -1,12 +1,7 @@
-# Laboratorio 3
-
-Integrantes:
-<br>
-Valentina Hernández
-<br>
-Felipe Gutierrez
-<br>
-Manuel Rojas
+# Robotica_Lab_3
+Robótica de Desarrollo, Intro a ROS
+## Integrantes:  
+Juan Pablo Tejeiro Londoño  
 
 ---
 
@@ -28,7 +23,6 @@ angular:
   y: 0.0
   z: 1.0" 
 ```
-![ROSturtle](https://user-images.githubusercontent.com/14100413/235314796-850c5068-aab0-45d2-8cb5-9dbc6274096b.png)
 
 ## Matlab: 
 Para operar Turtlesim mediante Matlab, fue necesario instalar el toolbox de Robotica de Mathworks.
@@ -52,9 +46,10 @@ En este se inicia la conexión con el maestro, se crea un publisher
 y se envian mensajes con la velocidad para modificar la posición
 en la dirección x.
 
-Esto puede visualizarse en el video matlab_example.webm:
+Esto puede visualizarse en el siguiente video:
 
-[matlab_example.webm](https://user-images.githubusercontent.com/55969494/235333335-7688c387-2ec4-4957-9ecb-7ca009e498fb.webm)
+[matlab_example.webm](https://github.com/jptejeirol/Robotica_Lab_3/assets/164267794/8f77433c-5b71-4e38-b6c6-ced298d23702)
+
 
 ---
 Ahora se crea un script para cubrir los otros puntos propuestos por la guía:
@@ -101,11 +96,12 @@ sub = rossubscriber('/turtle1/pose','turtlesim/Pose')
  El funcionamiento de esta comunicación y operación de la tortuga
  puede visualizarce en los siguientes vídeos:
  
- [matlab1.webm](https://user-images.githubusercontent.com/55969494/235333434-dc0dcf36-ffea-4bc4-89e8-4098249c9f5d.webm)
- <br>
- [matlab.webm](https://user-images.githubusercontent.com/55969494/235333436-d8e2cfb1-ede8-49f1-83dd-185c83fb4a4e.webm)
- <br>
-[matlab3.webm](https://user-images.githubusercontent.com/55969494/235333440-8d2ac82c-eef5-43af-8a03-6291fd552352.webm)
+[matlab1.webm](https://github.com/jptejeirol/Robotica_Lab_3/assets/164267794/999aaeaa-b1ea-476d-8737-2015d69a13c4)
+
+[matlab.webm](https://github.com/jptejeirol/Robotica_Lab_3/assets/164267794/8ac9e8b5-b027-4026-9be4-9679f4225fda)
+
+[matlab3.webm](https://github.com/jptejeirol/Robotica_Lab_3/assets/164267794/f99d03fe-7a1f-43f3-a599-c5aa77d38987)
+
 
 --------------------------------------------------------------
  
@@ -229,7 +225,7 @@ Por último, en el programa principal damos un mensaje de entrada, donde se indi
 if __name__ == '__main__':
     
     welcome = """
-    Made by: Valentina Hernandez, Felipe Gutierrez, Manuel Rojas
+    Made by: Juan P. Tejeiro
     --------------------------------------------------------------
     Reading from keyboard
     --------------------------------------------------------------
@@ -253,21 +249,9 @@ Por último, inicializamos un nodo al que nombramos `my_teleop_key`, utilizamos 
     except rospy.ROSInterruptException:
             pass
 ```
-### Resultados
+Utilizando `rqt_graph` podemos visualizar el gráfo de ROS activo con nuestro nodo y el nodo de turtlesim:
 
----
-
-En la siguiente imagen se puede evidenciar tres terminales: una con roscore activo, otra con el nodo de turtlesim activo y por último nuestro nodo `myTeleopKey`.
-
-![Terminales](./media/myTeleopKey.png)
-
-Además, utilizando `rqt_graph` podemos visualizar el gráfo de ROS activo con nuestro nodo y el nodo de turtlesim:
-
-![Terminales](./media/graph.png)
-
-Por último, se muestra un vídeo del script:
-
-https://user-images.githubusercontent.com/55969494/235333308-32cd1fa3-4fdc-42eb-aafd-000dbf1af166.mp4
+![graph](https://github.com/jptejeirol/Robotica_Lab_3/assets/164267794/ea660fcd-8ceb-4f82-be7f-d1643021a92e)
 
 
 

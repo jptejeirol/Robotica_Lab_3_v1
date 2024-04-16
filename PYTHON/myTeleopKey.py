@@ -76,7 +76,7 @@ def get_action():
 if __name__ == '__main__':
     
     welcome = """
-    Made by: Valentina Hernandez, Felipe Gutierrez, Manuel Rojas
+    Made by:Juan P. Tejeiro
     --------------------------------------------------------------
     Reading from keyboard
     --------------------------------------------------------------
